@@ -6,11 +6,12 @@ const app = express()
 app.get('/',function(req,res){
     res.sendFile(path.join(__dirname, '../index.html'))
 })
-app.get('/js', (req, res) => {
+
+app.get('/index.js', (req, res) => {
     res.sendFile(path.join(__dirname, '../index.js'))
   })
 
-  app.use('/js', express.static(path.join(__dirname, '../index.js')))
+  
 
 
 const port = process.env.PORT || 4005
